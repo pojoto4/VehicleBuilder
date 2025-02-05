@@ -8,13 +8,13 @@ import Wheel from "./Wheel.js";
 // define the Cli class
 class Cli {
   // done: update the vehicles property to accept Truck and Motorbike objects as well
-  // TODO: You will need to use the Union operator to define additional types for the array
-  // TODO: See the AbleToTow interface for an example of how to use the Union operator
+  // done: You will need to use the Union operator to define additional types for the array
+  // done: See the AbleToTow interface for an example of how to use the Union operator
   vehicles: (Truck | Motorbike | Car)[];
   selectedVehicleVin: string | undefined;
   exit: boolean = false;
 
-  // TODO: Update the constructor to accept Truck and Motorbike objects as well
+  // done: Update the constructor to accept Truck and Motorbike objects as well
   constructor(vehicles: (Truck | Motorbike | Car)[]) {
     this.vehicles = vehicles;
   }
@@ -276,7 +276,7 @@ class Cli {
   }
 
   // method to find a vehicle to tow
-  // TODO: add a parameter to accept a truck object
+  // done: add a parameter to accept a truck object
   findVehicleToTow(truck: Truck): void {
     inquirer
       .prompt([
@@ -398,7 +398,7 @@ class Cli {
             }
           }
         }
-        // TODO: add statements to perform the tow action only if the selected vehicle is a truck. Call the findVehicleToTow method to find a vehicle to tow and pass the selected truck as an argument. After calling the findVehicleToTow method, you will need to return to avoid instantly calling the performActions method again since findVehicleToTow is asynchronous.
+        // done: add statements to perform the tow action only if the selected vehicle is a truck. Call the findVehicleToTow method to find a vehicle to tow and pass the selected truck as an argument. After calling the findVehicleToTow method, you will need to return to avoid instantly calling the performActions method again since findVehicleToTow is asynchronous.
         else if (answers.action === "Tow") {
           for (let i = 0; i < this.vehicles.length; i++) {
             if (this.vehicles[i].vin === this.selectedVehicleVin) {
@@ -411,7 +411,7 @@ class Cli {
             }
           }
         }
-        // TODO: add statements to perform the wheelie action only if the selected vehicle is a motorbike
+        // done: add statements to perform the wheelie action only if the selected vehicle is a motorbike
         else if (answers.action === "Wheelie") {
           // find the selected vehicle and reverse it
           for (let i = 0; i < this.vehicles.length; i++) {
