@@ -403,7 +403,7 @@ class Cli {
           for (let i = 0; i < this.vehicles.length; i++) {
             if (this.vehicles[i].vin === this.selectedVehicleVin) {
               if (this.vehicles[i] instanceof Truck) {
-                await this.findVehicleToTow(this.vehicles[i]);
+                this.findVehicleToTow(this.vehicles[i] as Truck);
                 return;
               } else {
                 console.log("Tow action can only be performed by a truck.");
@@ -417,7 +417,8 @@ class Cli {
           for (let i = 0; i < this.vehicles.length; i++) {
             if (this.vehicles[i].vin === this.selectedVehicleVin) {
               if (this.vehicles[i] instanceof Motorbike) {
-                this.vehicles[i].wheelie();
+                const motorbike = this.vehicles[i] as Motorbike;
+                motorbike.wheelie();
               } else {
                 console.log("Wheelie action can only be performed by a motorbike.");
               }
