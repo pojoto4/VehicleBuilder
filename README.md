@@ -38,6 +38,7 @@
  Try all the prompts to read the outputs generated.
 
 ## Questions
+Walkthrough tutorial https://drive.google.com/file/d/1s_hU3QEFWZe19vpZJVz-Ou32GV5eqz3M/view?usp=sharing
 
 [My Github Profile](https://github.com/pojoto4)
 
